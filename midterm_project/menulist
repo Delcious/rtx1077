@@ -1,3 +1,8 @@
 import json
 with open(orders_file_path, 'r') as orders_file:
   orders = json.load(orders_file)
+if __name__ == '__main__':
+    import sys
+    if len(sys.argv) != 2:
+        print("Usage: python script.py <orders_file_path>")
+        exit(1)
